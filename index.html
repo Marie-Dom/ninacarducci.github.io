@@ -20,6 +20,8 @@
       content="ZAFzDWSTMbc4FOkgMED5JaG876YhatWZeQ9UdKLw098"
     />
     <meta charset="UTF-8" />
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+    <meta name="language" content="fr-FR" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nina Carducci - Photographe Professionnel sur Bordeaux</title>
     <meta
@@ -36,30 +38,30 @@
       rel="stylesheet"
     />
 
-    <script src="./assets/bootstrap/bootstrap.bundle.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <script src="./assets/maugallery.js"></script>
-    <script src="./assets/scripts.js"></script>
+    <script defer src="./assets/bootstrap/bootstrap.bundle.js"></script>
+
+    <script defer src="./assets/maugallery.js"></script>
+    <script defer src="./assets/scripts.js"></script>
   </head>
   <body>
-    <header class="top-header">
+    <header role="banner" class="top-header">
       <h1 class="name">Nina Carducci</h1>
-      <nav class="nav">
+      <nav aria-label="main navigation" class="nav">
         <ul>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#gallery">Galerie</a></li>
-          <li><a href="#services">Service</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" tabindex="0">À propos</a></li>
+          <li><a href="#gallery" tabindex="0">Galerie</a></li>
+          <li><a href="#services" tabindex="0">Service</a></li>
+          <li><a href="#contact" tabindex="0">Contact</a></li>
           <li>
             <a
               class="social-link"
               href="https://www.instagram.com/ninacarducci.photo/?hl=fr"
+              tabindex="0"
               target="_blank"
-              ><img src="assets/images/instagram.png" alt="logo Instagram"
+              aria-label="Redirection vers le compte Instagram de Nina Carducci"
+              ><img
+                src="assets/images/home/originales/instagram.png"
+                alt="logo Instagram"
             /></a>
           </li>
         </ul>
@@ -96,25 +98,113 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img
-                src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg"
-                class="d-block w-100"
-                alt="Photographie d'un homme traversant sur un passage piéton"
-              />
+              <picture>
+                <source
+                  media="(max-width : 650px)"
+                  srcset="
+                    ./assets/images/slider/Mobile/Webp/ryoji-iwata-wUZjnOv7t0g-unsplash.webp
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width : 999px)"
+                  srcset="
+                    ./assets/images/slider/Tablette/Webp/ryoji-iwata-wUZjnOv7t0g-unsplash.webp
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width : 1000px)"
+                  srcset="
+                    ./assets/images/slider/Desktop/Webp/ryoji-iwata-wUZjnOv7t0g-unsplash.webp
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./assets/images/slider/Desktop/Jpeg/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="image-caroussel"
+                  src="./assets/images/slider/Desktop/Jpeg/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg"
+                  class="d-block w-100"
+                  alt="Homme traversant sur un passage piéton"
+                />
+              </picture>
             </div>
             <div class="carousel-item">
-              <img
-                src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.jpg"
-                class="d-block w-100"
-                alt="Photographie fosse d'un concert face au public"
-              />
+              <picture>
+                <source
+                  media="(max-width : 650px)"
+                  srcset="
+                    ./assets/images/slider/Mobile/Webp/nicholas-green-nPz8akkUmDI-unsplash.webp
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width : 999px)"
+                  srcset="
+                    ./assets/images/slider/Tablette/Webp/nicholas-green-nPz8akkUmDI-unsplash.webp
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width : 1000px)"
+                  srcset="
+                    ./assets/images/slider/Desktop/Webp/nicholas-green-nPz8akkUmDI-unsplash.webp
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./assets/images/slider/Desktop/Jpeg/nicholas-green-nPz8akkUmDI-unsplash.jpg
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./assets/images/slider/Desktop/Jpeg/nicholas-green-nPz8akkUmDI-unsplash.jpg"
+                  class="d-block w-100"
+                  alt="Public vu de face lors d'un concert"
+                />
+              </picture>
             </div>
             <div class="carousel-item">
-              <img
-                src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.jpg"
-                class="d-block w-100"
-                alt="Photographie de mariés en train de s'embrasser"
-              />
+              <picture>
+                <source
+                  media="(max-width : 650px)"
+                  srcset="
+                    ./assets/images/slider/Mobile/Webp/edward-cisneros-3_h6-1NPDGw-unsplash.webp
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width : 999px)"
+                  srcset="
+                    ./assets/images/slider/Tablette/Webp/edward-cisneros-3_h6-1NPDGw-unsplash.webp
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width : 1000px)"
+                  srcset="
+                    ./assets/images/slider/Desktop/Webp/edward-cisneros-3_h6-1NPDGw-unsplash.webp
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./assets/images/slider/Desktop/Jpeg/edward-cisneros-3_h6-1NPDGw-unsplash.jpg
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./assets/images/slider/Desktop/Jpeg/edward-cisneros-3_h6-1NPDGw-unsplash.jpg"
+                  class="d-block w-100"
+                  alt="Mariés en train de s'embrasser"
+                />
+              </picture>
             </div>
           </div>
           <button
@@ -139,10 +229,29 @@
       </section>
       <section id="about">
         <div class="picture left">
-          <img src="./assets/images/nina.png" alt="Nina Carducci" />
+          <picture>
+            <source
+              media="(max-width : 650px)"
+              srcset="./assets/images/Illustrations/Mobile/Webp/nina.webp"
+              type="image/webp"
+            />
+            <source
+              media="(min-width : 651px)"
+              srcset="./assets/images/Illustrations/Desktop/Webp/nina.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="./assets/images/Illustrations/Desktop/Jpeg/nina.png"
+              type="image/png"
+            />
+            <img
+              src="./assets/images/home/Desktop/Jpeg/nina.png"
+              alt="Nina Carducci"
+            />
+          </picture>
         </div>
         <div id="about-me">
-          <h2 class="about-me__title">A propos de moi</h2>
+          <h2 class="about-me__title" tabindex="0">A propos de moi</h2>
           <p class="about-me__introduction">
             Devenir photographe était pour moi une évidence. Comme si j’y étais
             prédestiné. Saisir un moment, une émotion, une situation, un
@@ -163,58 +272,95 @@
         </div>
       </section>
       <section id="gallery">
-        <h2 class="title">Portfolio</h2>
+        <h2 class="title" tabindex="0">Portfolio</h2>
         <div class="container py-3">
           <div class="gallery" style="display: none">
             <img
+              tabindex="0"
+              srcset="
+                ./assets/images/gallery/concerts/Webp/aaron-paul-wnX-fXzB6Cw-unsplash.webp 440w
+              "
               data-gallery-tag="Concert"
               class="gallery-item"
               src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg"
-              alt="Concert dans une fosse face à la scène"
+              alt="Public levant les bras lors d'un concert face à la scène"
             />
             <img
+              tabindex="0"
+              srcset="
+                ./assets/images/gallery/entreprise/Webp/ali-morshedlou-WMD64tMfc4k-unsplash.webp 440w
+              "
               data-gallery-tag="Entreprises"
               class="gallery-item"
               src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg"
               alt="Homme en costume-cravatte, bras croisés"
             />
+
             <img
+              tabindex="0"
+              srcset="
+                ./assets/images/gallery/entreprise/Webp/jason-goodman-tHO1_OuKbg0-unsplash.webp 440w
+              "
               data-gallery-tag="Entreprises"
               class="gallery-item"
               src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg"
               alt="Femme vue de profil, riant assise sur son siège de bureau"
             />
             <img
+              tabindex="0"
+              srcset="
+                ./assets/images/gallery/mariage/Webp/hannah-busing-RvF2R_qMpRk-unsplash.webp 440w
+              "
               data-gallery-tag="Mariages"
               class="gallery-item"
               src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg"
               alt="Mains d'un homme et d'une femme se rejoignant"
             />
             <img
+              tabindex="0"
+              srcset="
+                ./assets/images/gallery/portraits/Webp/ade-tunji-rVkhWWZFAtQ-unsplash.webp 440w
+              "
               data-gallery-tag="Portrait"
               class="gallery-item"
               src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg"
               alt="Homme fermant les yeux, aveuglé par le soleil"
             />
             <img
+              tabindex="0"
+              srcset="
+                ./assets/images/gallery/mariage/Webp/jakob-owens-SiniLJkXhMc-unsplash.webp 440w
+              "
               data-gallery-tag="Mariages"
               class="gallery-item"
               src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg"
               alt="Jeunes mariés, riant aux éclats, devant un palmier"
             />
             <img
+              tabindex="0"
+              srcset="
+                ./assets/images/gallery/portraits/Webp/nino-van-prattenburg--443cl1uR_8-unsplash.webp 440w
+              "
               data-gallery-tag="Portrait"
               class="gallery-item"
               src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg"
               alt="Femme portant des lunettes, la main droite dans ses cheveux"
             />
             <img
+              tabindex="0"
+              srcset="
+                ./assets/images/gallery/concerts/Webp/austin-neill-hgO1wFPXl3I-unsplash.webp 440w
+              "
               data-gallery-tag="Concert"
               class="gallery-item"
               src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg"
               alt="Artiste chantant sur scène, le bras gauche levé, la main ouverte vers le ciel, et la main droite tenant le micro"
             />
             <img
+              tabindex="0"
+              srcset="
+                ./assets/images/gallery/entreprise/Webp/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp 440w
+              "
               data-gallery-tag="Entreprises"
               class="gallery-item"
               src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg"
@@ -238,7 +384,7 @@
         </div>
       </section>
       <section id="services">
-        <h2 class="title">Mes services</h2>
+        <h2 class="title" tabindex="0">Mes services</h2>
         <div class="container">
           <article class="service">
             <div class="service__description">
@@ -303,29 +449,51 @@
               N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24
               heures
             </p>
-            <form action="" method="post">
+            <form action="/" method="post">
               <label for="nom">Nom</label>
-              <input type="text" name="nom" id="nom" />
+              <input type="text" name="nom" id="nom" tabindex="0" />
               <label for="email">Email</label>
-              <input type="email" name="email" id="email" />
+              <input type="email" name="email" id="email" tabindex="0" />
               <label for="message">Message</label>
               <textarea
                 name="message"
                 id="message"
                 cols="30"
                 rows="10"
+                tabindex="28"
               ></textarea>
-              <input type="submit" value="Envoyer" />
+              <input type="submit" tabindex="0" value="Envoyer" />
             </form>
           </div>
           <div class="picture right">
-            <img
-              src="./assets/images/camera.png"
-              alt="Appareil photo pris sous un éclairage tamisé"
-            />
+            <picture>
+              <source
+                media="(max-width : 650px)"
+                srcset="./assets/images/home/Mobile/Webp/camera.webp"
+                type="image/webp"
+              />
+              <source
+                media="(min-width : 651px)"
+                srcset="./assets/images/home/Desktop/Webp/camera.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./assets/images/home/Desktop/Jpeg/camera.png"
+                type="image/png"
+              />
+              <img
+                src="./assets/images/home/Desktop/Jpeg/camera.png"
+                alt="Appareil photo pris sous un éclairage tamisé"
+              />
+            </picture>
           </div>
         </div>
       </section>
     </main>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
