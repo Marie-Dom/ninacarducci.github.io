@@ -26,22 +26,83 @@
     <title>Nina Carducci - Photographe Professionnel sur Bordeaux</title>
     <meta
       name="description"
-      content="Nina Carducci, photographe professionnel sur Bordeaux réalisant des shootings photos, retouches ou albums photos. Contact et devis facile et rapide."
+      content="Nina Carducci, photographe professionnelle sur Bordeaux réalisant des shootings photos, retouches ou albums photos. Contact et devis facile et rapide."
     />
-
-    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css" />
-    <link rel="stylesheet" href="./assets/style.css" />
+    <meta itemprop="name" content="Nina Carducci Photographe sur Bordeaux" />
+    <meta
+      itemprop="description"
+      content="Nina Carducci, photographe professionnelle sur Bordeaux réalisant des shootings photos, retouches ou albums photos. Contact et devis facile et rapide."
+    />
+    <meta
+      itemprop="image"
+      content="./assets/images/home/Desktop/Jpeg/nina.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@NinaCarducci" />
+    <meta name="twitter:creator" content="@NinaCarducci" />
+    <meta
+      name="twitter:title"
+      content="Nina Carducci Photographe sur Bordeaux"
+    />
+    <meta
+      name="twitter:description"
+      content="Nina Carducci, photographe professionnelle sur Bordeaux réalisant des shootings photos, retouches ou albums photos. Contact et devis facile et rapide."
+    />
+    <meta
+      name="twitter:image"
+      content="./assets/images/home/Desktop/Jpeg/nina.png"
+    />
+    <meta
+      property="og:title"
+      content="Nina Carducci Photographe sur Bordeaux"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:description"
+      content="Nina Carducci, photographe professionnelle sur Bordeaux réalisant des shootings photos, retouches ou albums photos. Contact et devis facile et rapide."
+    />
+    <meta property="author" content="Nina Carducci" />
+    <meta
+      property="og:image"
+      content="./assets/images/home/Desktop/Jpeg/nina.png"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Nina Carducci",
+        "image": "./assets/images/home/Desktop/Jpeg/nina.png",
+        "telephone": "+33 556677889",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "68 avenue Alsace-Lorraine",
+          "addressLocality": "Bordeaux",
+          "addressRegion": "Gironde",
+          "addressCountry": "France",
+          "postalCode": "33000"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": {
+            "@type": "DayOfWeek",
+            "name": "Lundi Mardi Mercredi Jeudi Vendredi"
+          },
+          "opens": "10:00",
+          "closes": "19:00"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/style.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
       rel="stylesheet"
     />
-
-    <script defer src="./assets/bootstrap/bootstrap.bundle.js"></script>
-
-    <script defer src="./assets/maugallery.js"></script>
-    <script defer src="./assets/scripts.js"></script>
+    <script defer src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script defer src="./assets/maugallery.min.js"></script>
+    <script defer src="./assets/scripts.min.js"></script>
   </head>
   <body>
     <header role="banner" class="top-header">
@@ -58,9 +119,11 @@
               href="https://www.instagram.com/ninacarducci.photo/?hl=fr"
               tabindex="0"
               target="_blank"
-              aria-label="Redirection vers le compte Instagram de Nina Carducci"
+              aria-label="Lien du profil Instagram de Nina Carducci"
               ><img
                 src="assets/images/home/originales/instagram.png"
+                width="20"
+                height="20"
                 alt="logo Instagram"
             /></a>
           </li>
@@ -334,7 +397,7 @@
               data-gallery-tag="Mariages"
               class="gallery-item"
               src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg"
-              alt="Jeunes mariés, riant aux éclats, devant un palmier"
+              alt="Jeunes mariés riant aux éclats, devant un palmier"
             />
             <img
               tabindex="0"
@@ -354,7 +417,7 @@
               data-gallery-tag="Concert"
               class="gallery-item"
               src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg"
-              alt="Artiste chantant sur scène, le bras gauche levé, la main ouverte vers le ciel, et la main droite tenant le micro"
+              alt="Artiste chantant sur scène, la main gauche tendue vers le ciel"
             />
             <img
               tabindex="0"
@@ -364,7 +427,7 @@
               data-gallery-tag="Entreprises"
               class="gallery-item"
               src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg"
-              alt="Femme riant aux éclats de face à son poste de travail, avec sur sa droite sur son bureau, une statuette représentant la Justice yeux bandés, portant une balance"
+              alt="Femme riant aux éclats de face à son poste de travail"
             />
           </div>
         </div>
@@ -453,7 +516,13 @@
               <label for="nom">Nom</label>
               <input type="text" name="nom" id="nom" tabindex="0" />
               <label for="email">Email</label>
-              <input type="email" name="email" id="email" tabindex="0" />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                tabindex="0"
+                autocomplete="off"
+              />
               <label for="message">Message</label>
               <textarea
                 name="message"
