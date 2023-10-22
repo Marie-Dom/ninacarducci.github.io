@@ -21,6 +21,14 @@
     />
     <meta charset="UTF-8" />
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
     <meta name="language" content="fr-FR" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nina Carducci - Photographe Professionnel sur Bordeaux</title>
@@ -28,6 +36,9 @@
       name="description"
       content="Nina Carducci, photographe professionnelle sur Bordeaux réalisant des shootings photos, retouches ou albums photos. Contact et devis facile et rapide."
     />
+    <link rel="icon" type="image/x-icon" href="./assets/icon/icon-32x32.webp" />
+    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/style.min.css" />
     <meta itemprop="name" content="Nina Carducci Photographe sur Bordeaux" />
     <meta
       itemprop="description"
@@ -81,25 +92,48 @@
           "addressCountry": "France",
           "postalCode": "33000"
         },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": {
-            "@type": "DayOfWeek",
-            "name": "Lundi Mardi Mercredi Jeudi Vendredi"
-          },
-          "opens": "10:00",
-          "closes": "19:00"
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "10:00",
+            "closes": "19:00"
+          }
+        ],
+        "priceRange": "€€",
+        "areaServed": ["Bordeaux", "Ile de France"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Services Proposés",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Shooting photo",
+              "price": "350€/demi journée",
+              "description": "Shooting photo professionnel à la demi-journée."
+            },
+            {
+              "@type": "Offer",
+              "name": "Retouches",
+              "price": "50€/photo",
+              "description": "Retouches photos professionnelles personnalisées."
+            },
+            {
+              "@type": "Offer",
+              "name": "Album photos",
+              "price": "400€ album A4",
+              "description": "Un album photo personnalisé."
+            }
+          ]
         }
       }
     </script>
-    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="./assets/style.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
-      rel="stylesheet"
-    />
     <script defer src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
     <script defer src="./assets/maugallery.min.js"></script>
     <script defer src="./assets/scripts.min.js"></script>
@@ -192,6 +226,8 @@
                 <img
                   class="image-caroussel"
                   src="./assets/images/slider/Desktop/Jpeg/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg"
+                  width="1422"
+                  height="657"
                   class="d-block w-100"
                   alt="Homme traversant sur un passage piéton"
                 />
@@ -228,6 +264,8 @@
                 />
                 <img
                   src="./assets/images/slider/Desktop/Jpeg/nicholas-green-nPz8akkUmDI-unsplash.jpg"
+                  width="1424"
+                  height="658"
                   class="d-block w-100"
                   alt="Public vu de face lors d'un concert"
                 />
@@ -264,6 +302,8 @@
                 />
                 <img
                   src="./assets/images/slider/Desktop/Jpeg/edward-cisneros-3_h6-1NPDGw-unsplash.jpg"
+                  width="1424"
+                  height="658"
                   class="d-block w-100"
                   alt="Mariés en train de s'embrasser"
                 />
@@ -309,6 +349,8 @@
             />
             <img
               src="./assets/images/home/Desktop/Jpeg/nina.png"
+              width="401"
+              height="400"
               alt="Nina Carducci"
             />
           </picture>
@@ -343,20 +385,30 @@
               srcset="
                 ./assets/images/gallery/concerts/Webp/aaron-paul-wnX-fXzB6Cw-unsplash.webp 440w
               "
+              width="470"
+              height="626"
               data-gallery-tag="Concert"
               class="gallery-item"
               src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg"
+              width="2448"
+              height="3264"
               alt="Public levant les bras lors d'un concert face à la scène"
+              loading="lazy"
             />
             <img
               tabindex="0"
               srcset="
                 ./assets/images/gallery/entreprise/Webp/ali-morshedlou-WMD64tMfc4k-unsplash.webp 440w
               "
+              width="470"
+              height="705"
               data-gallery-tag="Entreprises"
               class="gallery-item"
               src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg"
+              width="4000"
+              height="6000"
               alt="Homme en costume-cravatte, bras croisés"
+              loading="lazy"
             />
 
             <img
@@ -364,70 +416,105 @@
               srcset="
                 ./assets/images/gallery/entreprise/Webp/jason-goodman-tHO1_OuKbg0-unsplash.webp 440w
               "
+              width="694"
+              height="470"
               data-gallery-tag="Entreprises"
               class="gallery-item"
               src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg"
+              width="4084"
+              height="2764"
               alt="Femme vue de profil, riant assise sur son siège de bureau"
+              loading="lazy"
             />
             <img
               tabindex="0"
               srcset="
                 ./assets/images/gallery/mariage/Webp/hannah-busing-RvF2R_qMpRk-unsplash.webp 440w
               "
+              width="587"
+              height="470"
               data-gallery-tag="Mariages"
               class="gallery-item"
               src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg"
+              width="4453"
+              height="3562"
               alt="Mains d'un homme et d'une femme se rejoignant"
+              loading="lazy"
             />
             <img
               tabindex="0"
               srcset="
                 ./assets/images/gallery/portraits/Webp/ade-tunji-rVkhWWZFAtQ-unsplash.webp 440w
               "
+              width="470"
+              height="704"
               data-gallery-tag="Portrait"
               class="gallery-item"
               src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg"
+              width="2111"
+              height="3314"
               alt="Homme fermant les yeux, aveuglé par le soleil"
+              loading="lazy"
             />
             <img
               tabindex="0"
               srcset="
                 ./assets/images/gallery/mariage/Webp/jakob-owens-SiniLJkXhMc-unsplash.webp 440w
               "
+              width="470"
+              height="705"
               data-gallery-tag="Mariages"
               class="gallery-item"
               src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg"
+              width="4480"
+              height="6720"
               alt="Jeunes mariés riant aux éclats, devant un palmier"
+              loading="lazy"
             />
             <img
               tabindex="0"
               srcset="
                 ./assets/images/gallery/portraits/Webp/nino-van-prattenburg--443cl1uR_8-unsplash.webp 440w
               "
+              width="470"
+              height="706"
               data-gallery-tag="Portrait"
               class="gallery-item"
               src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg"
+              width="4024"
+              height="6048"
               alt="Femme portant des lunettes, la main droite dans ses cheveux"
+              loading="lazy"
             />
             <img
               tabindex="0"
               srcset="
                 ./assets/images/gallery/concerts/Webp/austin-neill-hgO1wFPXl3I-unsplash.webp 440w
               "
+              width="704"
+              height="470"
               data-gallery-tag="Concert"
               class="gallery-item"
               src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg"
+              width="5223"
+              height="3489"
               alt="Artiste chantant sur scène, la main gauche tendue vers le ciel"
+              loading="lazy"
             />
             <img
               tabindex="0"
               srcset="
                 ./assets/images/gallery/entreprise/Webp/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp 440w
               "
+              width="767"
+              height="470"
               data-gallery-tag="Entreprises"
               class="gallery-item"
               src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg"
+              width="6000"
+              height="3674"
               alt="Femme riant aux éclats de face à son poste de travail"
+              loading="lazy"
             />
           </div>
         </div>
@@ -552,6 +639,8 @@
               />
               <img
                 src="./assets/images/home/Desktop/Jpeg/camera.png"
+                width="400"
+                height="400"
                 alt="Appareil photo pris sous un éclairage tamisé"
               />
             </picture>
