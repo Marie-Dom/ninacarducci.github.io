@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta
-      name="google-site-verification"
-      content="ZAFzDWSTMbc4FOkgMED5JaG876YhatWZeQ9UdKLw098"
-    />
     <meta charset="UTF-8" />
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+    <!-- <meta http-equiv="Permissions-Policy" content="interest-cohort=()" /> -->
+    <link rel="preload" href="./assets/style.min.css" as="style" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,22 +14,31 @@
       as="style"
       onload="this.rel='stylesheet'"
     />
+    <link rel="stylesheet" href="./assets/style.min.css" />
+    <link
+      rel="stylesheet"
+      media="all and (max-width: 1180px)"
+      href="./assets/media-query1180px.css"
+    />
+    <link
+      rel="stylesheet"
+      media="all and (max-width: 1000px)"
+      href="./assets/media-query1000px.css"
+    />
+    <link
+      rel="stylesheet"
+      media="all and (max-width: 650px)"
+      href="./assets/media-query650px.css"
+    />
     <meta name="language" content="fr-FR" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Nina Carducci - Photographe Professionnelle sur Bordeaux</title>
     <meta
       name="description"
       content="Nina Carducci, photographe professionnelle sur Bordeaux réalisant des shootings photos, retouches ou albums photos. Contact et devis facile et rapide."
     />
     <link rel="icon" type="image/x-icon" href="./assets/icon/icon-32x32.webp" />
-    <link defer rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
-    <link defer rel="stylesheet" href="./assets/style.min.css" />
-    <meta itemprop="name" content="Nina Carducci Photographe sur Bordeaux" />
-    <meta
-      itemprop="description"
-      content="Nina Carducci, photographe professionnelle sur Bordeaux réalisant des shootings photos, retouches ou albums photos. Contact et devis facile et rapide."
-    />
-    <meta itemprop="image" content="./assets/images/home/avif/nina.avif" />
+
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@NinaCarducci.photograph" />
@@ -99,7 +107,7 @@
               href="https://www.instagram.com/ninacarducci.photo/?hl=fr"
               tabindex="0"
               target="_blank"
-              aria-label="Lien du profil Instagram de Nina Carducci"
+              aria-label="Profil Instagram de Nina Carducci"
               ><img
                 src="assets/images/home/originales/instagram.png"
                 width="20"
@@ -209,6 +217,7 @@
             data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev"
             aria-label="Previous"
+            tabindex="0"
           >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -219,6 +228,7 @@
             data-bs-target="#carouselExampleIndicators"
             data-bs-slide="next"
             aria-label="Next"
+            tabindex="0"
           >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
@@ -424,7 +434,7 @@
               N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24
               heures
             </p>
-            <form action="/" method="post">
+            <form action="/" method="post" aria-label="formulaire de contact">
               <label for="nom">Nom</label>
               <input type="text" name="nom" id="nom" tabindex="0" />
               <label for="email">Email</label>
